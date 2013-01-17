@@ -2,8 +2,8 @@
  * Routing directive
  */
 
-module.exports = function(app){
-    app.get('/', app.controller.index.index);
-    app.post('/post', app.controller.index.post);
-    app.get('/user/list', app.controller.user.list);
+module.exports = function(){
+    Common.app.get('/', Common.app.controller.index.index);
+    Common.app.post('/post', Common.app.controller.index.post);
+    Common.app.get('/user/list', Common.app.controller.user.list);
 };

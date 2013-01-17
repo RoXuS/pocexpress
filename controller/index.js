@@ -3,7 +3,7 @@
  */
 
 /* Get schema */
-var Schema1 = require('../model/schema1.js');
+var Schema1 = require(Common.app.model.schema1);
 
 /* Method index */
 exports.index = function(req, res){
