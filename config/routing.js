@@ -2,11 +2,8 @@
  * Routing directive
  */
 
-/* Load module dependencies */
-var index = require('../controller/index'),
-	user = require('../controller/user');
-
 module.exports = function(app){
-    app.get('/', index.index);
-    app.post('/post', index.post);
+    app.get('/', app.controller.index.index);
+    app.post('/post', app.controller.index.post);
+    app.get('/user/list', app.controller.user.list);
 };

@@ -10,8 +10,11 @@ http = require('http');
 /* Load config environment */
 app.config = require('./config/config')(app, express);
 
+/* Load autoloader */
+require('./autoloader')(app);
+
 /* Load routing directive */
-app.router = require('./config/routing')(app);
+app.routing = require('./config/routing')(app);
 
 /* Create server */
 http.createServer(app).listen(app.get('port'), function(){
