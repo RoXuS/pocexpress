@@ -12,22 +12,22 @@ module.exports = function(express){
         if (err) { throw err; }
     });
 
-    Common.app.controller = {};
-    Common.app.model = {};
+    PocExpress.app.controller = {};
+    PocExpress.app.model = {};
 
     /* Configure environment */
-    Common.app.configure(function(){
-        Common.app.set('port', process.env.PORT || 3000);
-        Common.app.set('views', __dirname + '/../views');
-        Common.app.set('view engine', 'jade');
-        Common.app.use(express.favicon());
-        Common.app.use(express.logger('dev'));
-        Common.app.use(express.bodyParser());
-        Common.app.use(express.methodOverride());
-        Common.app.use(Common.app.router);
-        Common.app.use(express.static(path.join(__dirname, '/../public')));
+    PocExpress.app.configure(function(){
+        PocExpress.app.set('port', process.env.PORT || 3000);
+        PocExpress.app.set('views', __dirname + '/../views');
+        PocExpress.app.set('view engine', 'jade');
+        PocExpress.app.use(express.favicon());
+        PocExpress.app.use(express.logger('dev'));
+        PocExpress.app.use(express.bodyParser());
+        PocExpress.app.use(express.methodOverride());
+        PocExpress.app.use(PocExpress.app.router);
+        PocExpress.app.use(express.static(path.join(__dirname, '/../public')));
     });
-    Common.app.configure('development', function(){
-        Common.app.use(express.errorHandler());
+    PocExpress.app.configure('development', function(){
+        PocExpress.app.use(express.errorHandler());
     });
 };

@@ -3,7 +3,7 @@
  */
 
 module.exports = function(){
-    Common.app.get('/', Common.app.controller.index.index);
-    Common.app.post('/post', Common.app.controller.index.post);
-    Common.app.get('/user/list', Common.app.controller.user.list);
+    PocExpress.app.get('/', PocExpress.app.controller.index.index);
+    PocExpress.app.post('/post', PocExpress.app.controller.index.post);
+    PocExpress.app.get('/user/list', PocExpress.app.controller.user.list);
 };
