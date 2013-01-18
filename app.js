@@ -4,10 +4,11 @@
 
 /* Load module dependencies */
 var express = require('express'),
-http = require('http');
+http = require('http'),
+Common = require('./common');
 
 /* Load app instance */
-require('./common')(express);
+PocExpress = new Common(express);
 
 /* Load config environment */
 require('./config/config')(express);

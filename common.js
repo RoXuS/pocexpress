@@ -1,5 +1,3 @@
 module.exports = function(express){
-	PocExpress = {
-		app: express()
-	};
+	this.app = express();
 };
