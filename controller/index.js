@@ -7,6 +7,7 @@ var Schema1 = require(PocExpress.app.model.schema1);
 
 /* Method index */
 exports.index = function(req, res){
+	console.log(Schema1);
 	res.render('index', { title: 'PocExpress' });
 };
 

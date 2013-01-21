@@ -6,6 +6,9 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+/* Repository */
+var Schema1Repository = require("../model/schema1Repository.js");
+
 /* Schema1 */
 var Schema1 = new Schema(
     {
@@ -19,5 +22,8 @@ var Schema1 = new Schema(
     }
 );
 
+/* Add method of repo */
+Schema1Repository(Schema1);
+
  /* export model */
-module.exports = mongoose.model('Schema1', Schema1);
+module.exports = mongoose.model("Schema1", Schema1);
